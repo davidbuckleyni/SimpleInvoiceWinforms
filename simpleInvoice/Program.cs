@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Syncfusion.WinForms.Controls;
+using Syncfusion.WinForms.Theme;
+using Syncfusion.WinForms.Core;
+using Syncfusion.Windows.Forms;
+using Syncfusion.WinForms.Controls;
+using Syncfusion.WinForms.Core;
+using Syncfusion.WinForms.Themes;
 
 namespace SimpleInvoice
 {
@@ -16,8 +22,10 @@ namespace SimpleInvoice
         {
           
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTk4MTAxQDMxMzkyZTM0MmUzMGFFZnMrai8ra0RUOSs2VlFVamc0UHVIeFpYYkNsQzBZQVpXOFBXdkhiaEk9");
-             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false)
+            SfSkinManager.LoadAssembly(typeof(GridOffice2016DarkGrayThemeColors).Assembly);
+            
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
         }
     }

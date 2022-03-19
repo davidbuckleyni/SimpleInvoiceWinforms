@@ -44,7 +44,7 @@ namespace simpleInvoice.Dal
             
             var invoiceLines = conn.Table<InvoiceLine>().Where(w => w.InvoiceId == Id).ToList();
             viewModel.InvoiceLines = invoiceLines;
-
+            return viewModel;   
 
         }
         public void SaveCompany(Company company)

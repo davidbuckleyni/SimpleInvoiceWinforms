@@ -90,8 +90,11 @@ namespace SimpleInvoice
             saveFileDialog.ShowDialog();
 
             var selectedInvoice = sfDataGrid1.SelectedItem as InvoiceHeader;
-            pDFServices.SavePdf(saveFileDialog.FileName,mo);
-            MessageBox.Show("PDF Saved");
+            if (selectedInvoice != null)
+            {
+                pDFServices.SavePdf(saveFileDialog.FileName, db.GetInvoicesViewModel(selectedInvoice.Id));
+                MessageBox.Show("PDF Saved");
+            }
         }
 
         private void btnNewInvoice_Click(object sender, EventArgs e)

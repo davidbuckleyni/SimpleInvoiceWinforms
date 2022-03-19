@@ -6,6 +6,7 @@
 
   <ItemGroup>
 	  <PackageReference Include="sqlite-net" Version="1.6.292" />
-	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />  </ItemGroup>
+	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="Syncfusion.Office2016Theme.WinForms" Version="19.4.0.56" />  </ItemGroup>
 
 </Project>
